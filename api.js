@@ -14,6 +14,9 @@ app.use('/', usersRouter);
 // blog routes
 app.use('/blog/', blogRouter);
 
+app.get('/', (req, res) => {
+  res.send('You are welcome to the blog app ')
+})
 
 
 app.get('*', (req, res) => {

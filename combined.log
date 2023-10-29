@@ -538,3 +538,29 @@
 {"level":"info","message":"database connection is successful"}
 {"level":"error","message":"Route not found"}
 {"level":"error","message":"Route not found"}
+{"level":"info","message":"Server is starting"}
+{"level":"info","message":"Server listening at http://localhost:7000"}
+{"level":"info","message":"Server is starting"}
+{"level":"info","message":"Server listening at http://localhost:7000"}
+{"level":"info","message":"Server is starting"}
+{"level":"info","message":"Server listening at http://localhost:7000"}
+{"level":"info","message":"database connection is successful"}
+{"level":"info","message":"Server is starting"}
+{"level":"info","message":"Server listening at http://localhost:7000"}
+{"level":"info","message":"Server is starting"}
+{"level":"info","message":"Server listening at http://localhost:7000"}
+{"level":"info","message":"database connection is successful"}
+{"level":"info","message":"Server is starting"}
+{"level":"info","message":"Server listening at http://localhost:7000"}
+{"level":"info","message":"database connection is successful"}
+{"level":"info","message":"Server is starting"}
+{"level":"info","message":"Server listening at http://localhost:7000"}
+{"level":"info","message":"database connection is successful"}
+{"level":"error","message":"Author not found"}
+{"level":"error","message":"Blog not found"}
+{"level":"info","message":"Blog Creation Validation Successful"}
+{"level":"info","message":"Estimated reading time: 0.03 minutes"}
+{"level":"info","message":"Blog created successfully: A very good blojnkn8ink bbjjnbnnnh bhh0eeeeengnnn2"}
+{"level":"info","message":"Server is starting"}
+{"level":"info","message":"Server listening at http://localhost:7000"}
+{"level":"info","message":"database connection is successful"}

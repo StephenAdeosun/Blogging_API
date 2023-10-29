@@ -344,7 +344,7 @@ const GetSingleBlog = async (req, res) => {
     await blog.save();
 
     // Retrieve the user information (author) for the blog
-    const author = await UserModel.findById(blog.author.id); // Assuming UserModel represents the user model
+    const author = await UserModel.findById(blog.author.id); 
 
     if (!author) {
       logger.error('Author not found');
