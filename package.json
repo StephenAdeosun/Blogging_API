@@ -20,7 +20,6 @@
     "express": "^4.18.2",
     "joi": "^17.11.0",
     "jsonwebtoken": "^9.0.2",
-    "mongodb-memory-server": "^9.0.1",
     "mongoose": "^7.6.3",
     "parser": "^0.1.4",
     "shortid": "^2.2.16",
@@ -28,6 +27,7 @@
   },
   "devDependencies": {
     "jest": "^29.7.0",
+    "mongodb-memory-server": "^9.0.1",
     "supertest": "^6.3.3"
   }
 }
