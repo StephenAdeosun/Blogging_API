@@ -1,0 +1,535 @@
+{"level":"info","message":"Blog created successfully: A very good blonkink bbnbnnnh bhh0eeeengnnn2"}
+{"level":"error","message":"Blog with this title already exists"}
+{"level":"info","message":"Estimated reading time: 0.03 minutes"}
+{"level":"info","message":"Blog created successfully: A very good blonknink bbnbnnnh bhh0eeeengnnn2"}
+{"level":"info","message":"Estimated reading time: 0.03 minutes"}
+{"_message":"blogs validation failed","errors":{"reading_time":{"kind":"Number","message":"Cast to Number failed for value \"0.03 mins\" (type string) at path \"reading_time\"","name":"CastError","path":"reading_time","reason":{"actual":false,"code":"ERR_ASSERTION","expected":true,"generatedMessage":true,"operator":"=="},"stringValue":"\"0.03 mins\"","value":"0.03 mins","valueType":"string"}},"level":"error","message":"Error creating blog: blogs validation failed: reading_time: Cast to Number failed for value \"0.03 mins\" (type string) at path \"reading_time\"","stack":"ValidationError: blogs validation failed: reading_time: Cast to Number failed for value \"0.03 mins\" (type string) at path \"reading_time\"\n    at Document.invalidate (C:\\Users\\USER\\Downloads\\Task_Management_App-master\\Task_Management_App-master\\node_modules\\mongoose\\lib\\document.js:3173:32)\n    at model.$set (C:\\Users\\USER\\Downloads\\Task_Management_App-master\\Task_Management_App-master\\node_modules\\mongoose\\lib\\document.js:1453:12)\n    at model.$set (C:\\Users\\USER\\Downloads\\Task_Management_App-master\\Task_Management_App-master\\node_modules\\mongoose\\lib\\document.js:1113:16)\n    at model.Document (C:\\Users\\USER\\Downloads\\Task_Management_App-master\\Task_Management_App-master\\node_modules\\mongoose\\lib\\document.js:164:12)\n    at model.Model (C:\\Users\\USER\\Downloads\\Task_Management_App-master\\Task_Management_App-master\\node_modules\\mongoose\\lib\\model.js:123:12)\n    at new model (C:\\Users\\USER\\Downloads\\Task_Management_App-master\\Task_Management_App-master\\node_modules\\mongoose\\lib\\model.js:4707:15)\n    at C:\\Users\\USER\\Downloads\\Task_Management_App-master\\Task_Management_App-master\\node_modules\\mongoose\\lib\\model.js:2911:18\n    at Array.map (<anonymous>)\n    at Function.create (C:\\Users\\USER\\Downloads\\Task_Management_App-master\\Task_Management_App-master\\node_modules\\mongoose\\lib\\model.js:2900:30)\n    at CreateBlog (C:\\Users\\USER\\Downloads\\Task_Management_App-master\\Task_Management_App-master\\blogs\\blog_controller.js:37:34)"}
+{"level":"info","message":"Estimated reading time: 0.03 minutes"}
+{"level":"info","message":"Blog created successfully: A very good blojnknink bbnbnnnh bhh0eeeeengnnn2"}
+{"level":"info","message":"database connection is successful"}
+{"level":"info","message":"database connection is successful"}
+{"level":"info","message":"database connection is successful"}
+{"level":"info","message":"database connection is successful"}
+{"level":"info","message":"database connection is successful"}
+{"level":"info","message":"database connection is successful"}
+{"level":"info","message":"database connection is successful"}
+{"level":"info","message":"database connection is successful"}
+{"level":"info","message":"database connection is successful"}
+{"level":"info","message":"database connection is successful"}
+{"level":"info","message":"database connection is successful"}
+{"level":"info","message":"database connection is successful"}
+{"level":"info","message":"database connection is successful"}
+{"level":"info","message":"database connection is successful"}
+{"level":"info","message":"database connection is successful"}
+{"level":"info","message":"database connection is successful"}
+{"level":"info","message":"database connection is successful"}
+{"level":"info","message":"database connection is successful"}
+{"level":"info","message":"database connection is successful"}
+{"level":"info","message":"database connection is successful"}
+{"level":"info","message":"Estimated reading time: 0.03 minutes"}
+{"level":"info","message":"Blog created successfully: A very good blojnknink bbjjnbnnnh bhh0eeeeengnnn2"}
+{"level":"info","message":"database connection is successful"}
+{"level":"info","message":"database connection is successful"}
+{"level":"info","message":"Server listening at http://localhost:7000"}
+{"level":"info","message":"database connection is successful"}
+{"level":"info","message":"Server is starting"}
+{"level":"info","message":"Server listening at http://localhost:7000"}
+{"level":"info","message":"database connection is successful"}
+{"level":"error","message":"Route not found"}
+{"level":"error","message":"Route not found"}
+{"level":"error","message":"Route not found"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"error","message":"User creation failed Operation `users.findOne()` buffering timed out after 10000ms","stack":"MongooseError: Operation `users.findOne()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (C:\\Users\\USER\\Downloads\\Task_Management_App-master\\Task_Management_App-master\\node_modules\\mongoose\\lib\\drivers\\node-mongodb-native\\collection.js:186:23)\n    at listOnTimeout (node:internal/timers:569:17)\n    at processTimers (node:internal/timers:512:7)"}
+{"level":"error","message":"User creation failed Operation `users.findOne()` buffering timed out after 10000ms","stack":"MongooseError: Operation `users.findOne()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (C:\\Users\\USER\\Downloads\\Task_Management_App-master\\Task_Management_App-master\\node_modules\\mongoose\\lib\\drivers\\node-mongodb-native\\collection.js:186:23)\n    at listOnTimeout (node:internal/timers:569:17)\n    at processTimers (node:internal/timers:512:7)"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"error","message":"User creation failed Operation `users.findOne()` buffering timed out after 10000ms","stack":"MongooseError: Operation `users.findOne()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (C:\\Users\\USER\\Downloads\\Task_Management_App-master\\Task_Management_App-master\\node_modules\\mongoose\\lib\\drivers\\node-mongodb-native\\collection.js:186:23)\n    at listOnTimeout (node:internal/timers:569:17)\n    at processTimers (node:internal/timers:512:7)"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"error","message":"User creation failed Operation `users.findOne()` buffering timed out after 10000ms","stack":"MongooseError: Operation `users.findOne()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (C:\\Users\\USER\\Downloads\\Task_Management_App-master\\Task_Management_App-master\\node_modules\\mongoose\\lib\\drivers\\node-mongodb-native\\collection.js:186:23)\n    at listOnTimeout (node:internal/timers:569:17)\n    at processTimers (node:internal/timers:512:7)"}
+{"level":"error","message":"User creation failed Operation `users.findOne()` buffering timed out after 10000ms","stack":"MongooseError: Operation `users.findOne()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (C:\\Users\\USER\\Downloads\\Task_Management_App-master\\Task_Management_App-master\\node_modules\\mongoose\\lib\\drivers\\node-mongodb-native\\collection.js:186:23)\n    at listOnTimeout (node:internal/timers:569:17)\n    at processTimers (node:internal/timers:512:7)"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"error","message":"User creation failed Operation `users.findOne()` buffering timed out after 10000ms","stack":"MongooseError: Operation `users.findOne()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (C:\\Users\\USER\\Downloads\\Task_Management_App-master\\Task_Management_App-master\\node_modules\\mongoose\\lib\\drivers\\node-mongodb-native\\collection.js:186:23)\n    at listOnTimeout (node:internal/timers:569:17)\n    at processTimers (node:internal/timers:512:7)"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"error","message":"User creation failed Operation `users.findOne()` buffering timed out after 10000ms","stack":"MongooseError: Operation `users.findOne()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (C:\\Users\\USER\\Downloads\\Task_Management_App-master\\Task_Management_App-master\\node_modules\\mongoose\\lib\\drivers\\node-mongodb-native\\collection.js:186:23)\n    at listOnTimeout (node:internal/timers:569:17)\n    at processTimers (node:internal/timers:512:7)"}
+{"level":"error","message":"User creation failed Operation `users.findOne()` buffering timed out after 10000ms","stack":"MongooseError: Operation `users.findOne()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (C:\\Users\\USER\\Downloads\\Task_Management_App-master\\Task_Management_App-master\\node_modules\\mongoose\\lib\\drivers\\node-mongodb-native\\collection.js:186:23)\n    at listOnTimeout (node:internal/timers:569:17)\n    at processTimers (node:internal/timers:512:7)"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"error","message":"User creation failed Operation `users.findOne()` buffering timed out after 10000ms","stack":"MongooseError: Operation `users.findOne()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (C:\\Users\\USER\\Downloads\\Task_Management_App-master\\Task_Management_App-master\\node_modules\\mongoose\\lib\\drivers\\node-mongodb-native\\collection.js:186:23)\n    at listOnTimeout (node:internal/timers:569:17)\n    at processTimers (node:internal/timers:512:7)"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"error","message":"User creation failed Operation `users.findOne()` buffering timed out after 10000ms","stack":"MongooseError: Operation `users.findOne()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (C:\\Users\\USER\\Downloads\\Task_Management_App-master\\Task_Management_App-master\\node_modules\\mongoose\\lib\\drivers\\node-mongodb-native\\collection.js:186:23)\n    at listOnTimeout (node:internal/timers:569:17)\n    at processTimers (node:internal/timers:512:7)"}
+{"level":"error","message":"User creation failed Operation `users.findOne()` buffering timed out after 10000ms","stack":"MongooseError: Operation `users.findOne()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (C:\\Users\\USER\\Downloads\\Task_Management_App-master\\Task_Management_App-master\\node_modules\\mongoose\\lib\\drivers\\node-mongodb-native\\collection.js:186:23)\n    at listOnTimeout (node:internal/timers:569:17)\n    at processTimers (node:internal/timers:512:7)"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"error","message":"User creation failed Operation `users.findOne()` buffering timed out after 10000ms","stack":"MongooseError: Operation `users.findOne()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (C:\\Users\\USER\\Downloads\\Task_Management_App-master\\Task_Management_App-master\\node_modules\\mongoose\\lib\\drivers\\node-mongodb-native\\collection.js:186:23)\n    at listOnTimeout (node:internal/timers:569:17)\n    at processTimers (node:internal/timers:512:7)"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"error","message":"User creation failed Operation `users.findOne()` buffering timed out after 10000ms","stack":"MongooseError: Operation `users.findOne()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (C:\\Users\\USER\\Downloads\\Task_Management_App-master\\Task_Management_App-master\\node_modules\\mongoose\\lib\\drivers\\node-mongodb-native\\collection.js:186:23)\n    at listOnTimeout (node:internal/timers:569:17)\n    at processTimers (node:internal/timers:512:7)"}
+{"level":"error","message":"User creation failed Operation `users.findOne()` buffering timed out after 10000ms","stack":"MongooseError: Operation `users.findOne()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (C:\\Users\\USER\\Downloads\\Task_Management_App-master\\Task_Management_App-master\\node_modules\\mongoose\\lib\\drivers\\node-mongodb-native\\collection.js:186:23)\n    at listOnTimeout (node:internal/timers:569:17)\n    at processTimers (node:internal/timers:512:7)"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"error","message":"User creation failed Operation `users.findOne()` buffering timed out after 10000ms","stack":"MongooseError: Operation `users.findOne()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (C:\\Users\\USER\\Downloads\\Task_Management_App-master\\Task_Management_App-master\\node_modules\\mongoose\\lib\\drivers\\node-mongodb-native\\collection.js:186:23)\n    at listOnTimeout (node:internal/timers:569:17)\n    at processTimers (node:internal/timers:512:7)"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"error","message":"User creation failed Operation `users.findOne()` buffering timed out after 10000ms","stack":"MongooseError: Operation `users.findOne()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (C:\\Users\\USER\\Downloads\\Task_Management_App-master\\Task_Management_App-master\\node_modules\\mongoose\\lib\\drivers\\node-mongodb-native\\collection.js:186:23)\n    at listOnTimeout (node:internal/timers:569:17)\n    at processTimers (node:internal/timers:512:7)"}
+{"level":"error","message":"User creation failed Operation `users.findOne()` buffering timed out after 10000ms","stack":"MongooseError: Operation `users.findOne()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (C:\\Users\\USER\\Downloads\\Task_Management_App-master\\Task_Management_App-master\\node_modules\\mongoose\\lib\\drivers\\node-mongodb-native\\collection.js:186:23)\n    at listOnTimeout (node:internal/timers:569:17)\n    at processTimers (node:internal/timers:512:7)"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"error","message":"User creation failed Operation `users.findOne()` buffering timed out after 10000ms","stack":"MongooseError: Operation `users.findOne()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (C:\\Users\\USER\\Downloads\\Task_Management_App-master\\Task_Management_App-master\\node_modules\\mongoose\\lib\\drivers\\node-mongodb-native\\collection.js:186:23)\n    at listOnTimeout (node:internal/timers:569:17)\n    at processTimers (node:internal/timers:512:7)"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"error","message":"User creation failed Operation `users.findOne()` buffering timed out after 10000ms","stack":"MongooseError: Operation `users.findOne()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (C:\\Users\\USER\\Downloads\\Task_Management_App-master\\Task_Management_App-master\\node_modules\\mongoose\\lib\\drivers\\node-mongodb-native\\collection.js:186:23)\n    at listOnTimeout (node:internal/timers:569:17)\n    at processTimers (node:internal/timers:512:7)"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"info","message":"User logged in successfully"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"error","message":"User not found"}
+{"level":"error","message":"User creation failed Operation `users.findOne()` buffering timed out after 10000ms","stack":"MongooseError: Operation `users.findOne()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (C:\\Users\\USER\\Downloads\\Task_Management_App-master\\Task_Management_App-master\\node_modules\\mongoose\\lib\\drivers\\node-mongodb-native\\collection.js:186:23)\n    at listOnTimeout (node:internal/timers:569:17)\n    at processTimers (node:internal/timers:512:7)"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"error","message":"User creation failed Operation `users.findOne()` buffering timed out after 10000ms","stack":"MongooseError: Operation `users.findOne()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (C:\\Users\\USER\\Downloads\\Task_Management_App-master\\Task_Management_App-master\\node_modules\\mongoose\\lib\\drivers\\node-mongodb-native\\collection.js:186:23)\n    at listOnTimeout (node:internal/timers:569:17)\n    at processTimers (node:internal/timers:512:7)"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"error","message":"User creation failed Operation `users.findOne()` buffering timed out after 10000ms","stack":"MongooseError: Operation `users.findOne()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (C:\\Users\\USER\\Downloads\\Task_Management_App-master\\Task_Management_App-master\\node_modules\\mongoose\\lib\\drivers\\node-mongodb-native\\collection.js:186:23)\n    at listOnTimeout (node:internal/timers:569:17)\n    at processTimers (node:internal/timers:512:7)"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"info","message":"User logged in successfully"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"error","message":"User not found"}
+{"level":"error","message":"User creation failed Operation `users.findOne()` buffering timed out after 10000ms","stack":"MongooseError: Operation `users.findOne()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (C:\\Users\\USER\\Downloads\\Task_Management_App-master\\Task_Management_App-master\\node_modules\\mongoose\\lib\\drivers\\node-mongodb-native\\collection.js:186:23)\n    at listOnTimeout (node:internal/timers:569:17)\n    at processTimers (node:internal/timers:512:7)"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"error","message":"User creation failed Operation `users.findOne()` buffering timed out after 10000ms","stack":"MongooseError: Operation `users.findOne()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (C:\\Users\\USER\\Downloads\\Task_Management_App-master\\Task_Management_App-master\\node_modules\\mongoose\\lib\\drivers\\node-mongodb-native\\collection.js:186:23)\n    at listOnTimeout (node:internal/timers:569:17)\n    at processTimers (node:internal/timers:512:7)"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"error","message":"User creation failed Operation `users.findOne()` buffering timed out after 10000ms","stack":"MongooseError: Operation `users.findOne()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (C:\\Users\\USER\\Downloads\\Task_Management_App-master\\Task_Management_App-master\\node_modules\\mongoose\\lib\\drivers\\node-mongodb-native\\collection.js:186:23)\n    at listOnTimeout (node:internal/timers:569:17)\n    at processTimers (node:internal/timers:512:7)"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"info","message":"User logged in successfully"}
+{"level":"error","message":"User creation failed Operation `users.findOne()` buffering timed out after 10000ms","stack":"MongooseError: Operation `users.findOne()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (C:\\Users\\USER\\Downloads\\Task_Management_App-master\\Task_Management_App-master\\node_modules\\mongoose\\lib\\drivers\\node-mongodb-native\\collection.js:186:23)\n    at listOnTimeout (node:internal/timers:569:17)\n    at processTimers (node:internal/timers:512:7)"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"error","message":"User not found"}
+{"level":"error","message":"User creation failed Operation `users.findOne()` buffering timed out after 10000ms","stack":"MongooseError: Operation `users.findOne()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (C:\\Users\\USER\\Downloads\\Task_Management_App-master\\Task_Management_App-master\\node_modules\\mongoose\\lib\\drivers\\node-mongodb-native\\collection.js:186:23)\n    at listOnTimeout (node:internal/timers:569:17)\n    at processTimers (node:internal/timers:512:7)"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"error","message":"User creation failed Operation `users.findOne()` buffering timed out after 10000ms","stack":"MongooseError: Operation `users.findOne()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (C:\\Users\\USER\\Downloads\\Task_Management_App-master\\Task_Management_App-master\\node_modules\\mongoose\\lib\\drivers\\node-mongodb-native\\collection.js:186:23)\n    at listOnTimeout (node:internal/timers:569:17)\n    at processTimers (node:internal/timers:512:7)"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"info","message":"User logged in successfully"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"error","message":"User not found"}
+{"level":"error","message":"User creation failed Operation `users.findOne()` buffering timed out after 10000ms","stack":"MongooseError: Operation `users.findOne()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (C:\\Users\\USER\\Downloads\\Task_Management_App-master\\Task_Management_App-master\\node_modules\\mongoose\\lib\\drivers\\node-mongodb-native\\collection.js:186:23)\n    at listOnTimeout (node:internal/timers:569:17)\n    at processTimers (node:internal/timers:512:7)"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"error","message":"User creation failed Operation `users.findOne()` buffering timed out after 10000ms","stack":"MongooseError: Operation `users.findOne()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (C:\\Users\\USER\\Downloads\\Task_Management_App-master\\Task_Management_App-master\\node_modules\\mongoose\\lib\\drivers\\node-mongodb-native\\collection.js:186:23)\n    at listOnTimeout (node:internal/timers:569:17)\n    at processTimers (node:internal/timers:512:7)"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"error","message":"User creation failed Operation `users.findOne()` buffering timed out after 10000ms","stack":"MongooseError: Operation `users.findOne()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (C:\\Users\\USER\\Downloads\\Task_Management_App-master\\Task_Management_App-master\\node_modules\\mongoose\\lib\\drivers\\node-mongodb-native\\collection.js:186:23)\n    at listOnTimeout (node:internal/timers:569:17)\n    at processTimers (node:internal/timers:512:7)"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"info","message":"User logged in successfully"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"error","message":"User not found"}
+{"level":"error","message":"User creation failed Operation `users.findOne()` buffering timed out after 10000ms","stack":"MongooseError: Operation `users.findOne()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (C:\\Users\\USER\\Downloads\\Task_Management_App-master\\Task_Management_App-master\\node_modules\\mongoose\\lib\\drivers\\node-mongodb-native\\collection.js:186:23)\n    at listOnTimeout (node:internal/timers:569:17)\n    at processTimers (node:internal/timers:512:7)"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"error","message":"User creation failed Operation `users.findOne()` buffering timed out after 10000ms","stack":"MongooseError: Operation `users.findOne()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (C:\\Users\\USER\\Downloads\\Task_Management_App-master\\Task_Management_App-master\\node_modules\\mongoose\\lib\\drivers\\node-mongodb-native\\collection.js:186:23)\n    at listOnTimeout (node:internal/timers:569:17)\n    at processTimers (node:internal/timers:512:7)"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"error","message":"User creation failed Operation `users.findOne()` buffering timed out after 10000ms","stack":"MongooseError: Operation `users.findOne()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (C:\\Users\\USER\\Downloads\\Task_Management_App-master\\Task_Management_App-master\\node_modules\\mongoose\\lib\\drivers\\node-mongodb-native\\collection.js:186:23)\n    at listOnTimeout (node:internal/timers:569:17)\n    at processTimers (node:internal/timers:512:7)"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"info","message":"User logged in successfully"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"error","message":"User not found"}
+{"level":"error","message":"User creation failed Operation `users.findOne()` buffering timed out after 10000ms","stack":"MongooseError: Operation `users.findOne()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (C:\\Users\\USER\\Downloads\\Task_Management_App-master\\Task_Management_App-master\\node_modules\\mongoose\\lib\\drivers\\node-mongodb-native\\collection.js:186:23)\n    at listOnTimeout (node:internal/timers:569:17)\n    at processTimers (node:internal/timers:512:7)"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"error","message":"User creation failed Operation `users.findOne()` buffering timed out after 10000ms","stack":"MongooseError: Operation `users.findOne()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (C:\\Users\\USER\\Downloads\\Task_Management_App-master\\Task_Management_App-master\\node_modules\\mongoose\\lib\\drivers\\node-mongodb-native\\collection.js:186:23)\n    at listOnTimeout (node:internal/timers:569:17)\n    at processTimers (node:internal/timers:512:7)"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"error","message":"User creation failed Operation `users.findOne()` buffering timed out after 10000ms","stack":"MongooseError: Operation `users.findOne()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (C:\\Users\\USER\\Downloads\\Task_Management_App-master\\Task_Management_App-master\\node_modules\\mongoose\\lib\\drivers\\node-mongodb-native\\collection.js:186:23)\n    at listOnTimeout (node:internal/timers:569:17)\n    at processTimers (node:internal/timers:512:7)"}
+{"level":"error","message":"User creation failed Operation `users.findOne()` buffering timed out after 10000ms","stack":"MongooseError: Operation `users.findOne()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (C:\\Users\\USER\\Downloads\\Task_Management_App-master\\Task_Management_App-master\\node_modules\\mongoose\\lib\\drivers\\node-mongodb-native\\collection.js:186:23)\n    at listOnTimeout (node:internal/timers:569:17)\n    at processTimers (node:internal/timers:512:7)"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"info","message":"User logged in successfully"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"error","message":"User not found"}
+{"level":"error","message":"User creation failed Operation `users.findOne()` buffering timed out after 10000ms","stack":"MongooseError: Operation `users.findOne()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (C:\\Users\\USER\\Downloads\\Task_Management_App-master\\Task_Management_App-master\\node_modules\\mongoose\\lib\\drivers\\node-mongodb-native\\collection.js:186:23)\n    at listOnTimeout (node:internal/timers:569:17)\n    at processTimers (node:internal/timers:512:7)"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"info","message":"User logged in successfully"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"error","message":"User not found"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"info","message":"User logged in successfully"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"error","message":"User not found"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"info","message":"User logged in successfully"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"error","message":"User not found"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"info","message":"User logged in successfully"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"error","message":"User not found"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"info","message":"User logged in successfully"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"error","message":"User not found"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"info","message":"User logged in successfully"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"error","message":"User not found"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"info","message":"User logged in successfully"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"error","message":"User not found"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"info","message":"User logged in successfully"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"error","message":"User not found"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"info","message":"User logged in successfully"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"error","message":"User not found"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"info","message":"User logged in successfully"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"error","message":"User not found"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"info","message":"User logged in successfully"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"error","message":"User not found"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"error","message":"User already exists"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"info","message":"User logged in successfully"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"error","message":"User not found"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"error","message":"User already exists"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"info","message":"User logged in successfully"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"error","message":"User not found"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"error","message":"User already exists"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"info","message":"User logged in successfully"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"error","message":"User not found"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"error","message":"User already exists"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"info","message":"User logged in successfully"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"error","message":"User not found"}
+{"level":"error","message":"You are not authenticated!"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"error","message":"User already exists"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"info","message":"User logged in successfully"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"error","message":"User not found"}
+{"level":"info","message":"Estimated reading time: 0.025 minutes"}
+{"level":"error","message":"Error creating blog: Cannot read properties of undefined (reading '_id')","stack":"TypeError: Cannot read properties of undefined (reading '_id')\n    at _id (C:\\Users\\USER\\Downloads\\Task_Management_App-master\\Task_Management_App-master\\blogs\\blog_controller.js:42:30)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"error","message":"User already exists"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"info","message":"User logged in successfully"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"error","message":"User not found"}
+{"level":"error","message":"You are not authenticated!"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"error","message":"User already exists"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"info","message":"User logged in successfully"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"error","message":"User not found"}
+{"level":"error","message":"You are not authenticated!"}
+{"level":"error","message":"You are not authenticated!"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"error","message":"User already exists"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"info","message":"User logged in successfully"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"error","message":"User not found"}
+{"level":"error","message":"You are not authenticated!"}
+{"level":"error","message":"You are not authenticated!"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"error","message":"User already exists"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"info","message":"User logged in successfully"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"error","message":"User not found"}
+{"level":"error","message":"You are not authenticated!"}
+{"level":"error","message":"You are not authenticated!"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"error","message":"User already exists"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"info","message":"User logged in successfully"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"error","message":"User not found"}
+{"level":"error","message":"You are not authenticated!"}
+{"level":"error","message":"You are not authenticated!"}
+{"level":"error","message":"You are not authenticated!"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"error","message":"User already exists"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"info","message":"User logged in successfully"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"error","message":"User not found"}
+{"level":"error","message":"You are not authenticated!"}
+{"level":"error","message":"You are not authenticated!"}
+{"level":"error","message":"You are not authenticated!"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"error","message":"User already exists"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"info","message":"User logged in successfully"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"error","message":"User not found"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"error","message":"User already exists"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"info","message":"User logged in successfully"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"error","message":"User not found"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"error","message":"User already exists"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"info","message":"User logged in successfully"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"error","message":"User not found"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"error","message":"User already exists"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"info","message":"User logged in successfully"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"error","message":"User not found"}
+{"level":"error","message":"Route not found"}
+{"level":"error","message":"Route not found"}
+{"level":"error","message":"Route not found"}
+{"level":"error","message":"Route not found"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"error","message":"User already exists"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"info","message":"User logged in successfully"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"error","message":"User not found"}
+{"level":"error","message":"You are not authenticated!"}
+{"level":"error","message":"No blogs found"}
+{"level":"error","message":"Author not found"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"error","message":"User already exists"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"info","message":"User logged in successfully"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"error","message":"User not found"}
+{"level":"error","message":"You are not authenticated!"}
+{"level":"error","message":"You are not authenticated!"}
+{"level":"error","message":"No blogs found"}
+{"level":"error","message":"Author not found"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"error","message":"User already exists"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"info","message":"User logged in successfully"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"error","message":"User not found"}
+{"level":"error","message":"You are not authenticated!"}
+{"level":"error","message":"You are not authenticated!"}
+{"level":"error","message":"No blogs found"}
+{"level":"error","message":"Author not found"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"error","message":"User already exists"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"info","message":"User logged in successfully"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"error","message":"User not found"}
+{"level":"error","message":"You are not authenticated!"}
+{"level":"error","message":"You are not authenticated!"}
+{"level":"error","message":"No blogs found"}
+{"level":"error","message":"Author not found"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"error","message":"User already exists"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"info","message":"User logged in successfully"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"error","message":"User not found"}
+{"level":"error","message":"You are not authenticated!"}
+{"level":"error","message":"You are not authenticated!"}
+{"level":"error","message":"No blogs found"}
+{"level":"error","message":"Author not found"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"error","message":"User already exists"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"info","message":"User logged in successfully"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"error","message":"User not found"}
+{"level":"error","message":"You are not authenticated!"}
+{"level":"error","message":"You are not authenticated!"}
+{"level":"error","message":"No blogs found"}
+{"level":"error","message":"Author not found"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"error","message":"User already exists"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"info","message":"User logged in successfully"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"error","message":"User not found"}
+{"level":"error","message":"You are not authenticated!"}
+{"level":"error","message":"You are not authenticated!"}
+{"level":"error","message":"You are not authenticated!"}
+{"level":"error","message":"No blogs found"}
+{"level":"error","message":"Author not found"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"error","message":"User already exists"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"info","message":"User logged in successfully"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"error","message":"User not found"}
+{"level":"error","message":"You are not authenticated!"}
+{"level":"error","message":"No blogs found"}
+{"level":"error","message":"Author not found"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"error","message":"User already exists"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"info","message":"User logged in successfully"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"error","message":"User not found"}
+{"level":"error","message":"You are not authenticated!"}
+{"level":"error","message":"No blogs found"}
+{"level":"error","message":"Author not found"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"error","message":"User already exists"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"info","message":"User logged in successfully"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"error","message":"User not found"}
+{"level":"error","message":"You are not authenticated!"}
+{"level":"error","message":"No blogs found"}
+{"level":"error","message":"Author not found"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User created successfully"}
+{"level":"info","message":"User Creation Validation Successful"}
+{"level":"error","message":"User already exists"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"info","message":"User logged in successfully"}
+{"level":"info","message":"User Login Validation Successful"}
+{"level":"error","message":"User not found"}

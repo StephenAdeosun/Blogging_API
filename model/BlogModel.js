@@ -21,7 +21,7 @@ const BlogModel = new Schema({
     default: "draft",
   },
   read_count: { type: Number, default: 0 },
-  reading_time: { type: Number, default: 0 },
+  reading_time: { type: String, default: 0 },
   tags: [String],
   author_name: { type: String},
   body: { type: String, required: true },

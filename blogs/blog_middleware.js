@@ -1,5 +1,5 @@
 const joi = require('joi')
-
+const logger = require("../logger/logger.js")
 
 const ValidateBlogCreation = async (req, res, next) => {
     try {
@@ -28,11 +28,14 @@ const ValidateBlogCreation = async (req, res, next) => {
         })
 
         await schema.validateAsync(req.body, { abortEarly: true })
-
+        logger.info('Blog Creation Validation Successful')
         next()
     } catch (error) {
+        logger.error('Blog Creation Validation Failed', error)
         return res.status(422).json({
-            message: error.message,
+            // message: error.message,
+            message: 'You are not authenticated!',
+
             success: false
         })
     }
@@ -65,9 +68,10 @@ const ValidateBlogUpdate = async (req, res, next) => {
         })
 
         await schema.validateAsync(req.body, { abortEarly: true })
-
+        logger.info('Blog Update Validation Successful')
         next()
     } catch (error) {
+        logger.error('Blog Update Validation Failed', error)
         return res.status(422).json({
             message: error.message,
             success: false
