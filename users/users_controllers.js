@@ -25,7 +25,7 @@ const CreateUser = async (req, res) => {
             password: userFromReq.password,
         })
         logger.info('User created successfully')
-        const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: '1d' })
+        const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: '1hr' })
 
         if (user) {
             logger.info('User created successfully')
@@ -43,7 +43,7 @@ const CreateUser = async (req, res) => {
             success: false,
             message: error.message,
         })
-        
+
     }
 }
 
@@ -68,7 +68,7 @@ const LoginUser = async (req, res) => {
         })
     }
     logger.info('User logged in successfully')
-    const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: '1d' })
+    const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: '1hr' })
     return res.status(200).json({
         success: true,
         message: 'User logged in successfully',
