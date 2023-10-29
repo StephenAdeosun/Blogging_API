@@ -1,0 +1,26 @@
+
+    <div class="delete-task-container">
+        <div class="inner-delete-task-container">
+            <div class="edit-task-form">
+                <h2 class="text-white mb-5 text-center">Confirm Task Deletion!</h2>
+                <form action="/delete/<%= task._id %>" method="post">
+                    <div class="label-container">
+                        <label for="title" class="mr-2">Task Title:</label>
+                        <input type="text" name="title" id="title" value="<%= task.title %>" readonly>
+                    </div>
+                    <div class="label-container">
+                        <label for="description" class="mr-2">Description or Details</label>
+                        <textarea name="description" id="description" readonly><%= task.description %></textarea>
+                    </div>
+                    <div class="label-container">
+                        <label for="state" class="mr-2">Task State:</label>
+                        <input type="text" name="state" id="state" value="<%= task.state %>" readonly>
+                    </div>
+                    <div class="task-button-container">
+                        <a href="/tasks" class="task-button">Cancel</a>
+                        <button type="submit" class="task-button">Delete Task</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,31 @@
+{
+  "name": "express-test-auth",
+  "version": "1.0.0",
+  "description": "",
+  "main": "api.js",
+  "scripts": {
+    "test": "jest",
+    "start": "nodemon api.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^2.4.3",
+    "body": "^5.1.0",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.3.1",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "joi": "^17.11.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^7.6.3",
+    "parser": "^0.1.4",
+    "shortid": "^2.2.16",
+    "supertest": "^6.3.3"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}

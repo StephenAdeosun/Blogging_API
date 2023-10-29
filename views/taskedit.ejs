@@ -1,0 +1,25 @@
+<!-- taskedit.ejs -->
+<!DOCTYPE html>
+<html>
+<body>
+  <header>
+    <% include('./partials/header'); %>
+  </header>
+  <h2>Edit Task</h2>
+  <form action="/views/task/edit/<%= task._id %>" method="POST">
+    <label for="title">Title:</label>
+    <input type="text" id="title" name="title" value="<%= task.title %>" required>
+    <br>
+    <label for="description">Description:</label>
+    <textarea id="description" name="description" required><%= task.description %></textarea>
+    <br>
+    <label for="state">State:</label>
+    <select id="state" name="state">
+      <option value="pending" <%= task.state === 'pending' ? 'selected' : '' %>>Pending</option>
+      <option value="done" <%= task.state === 'completed' ? 'selected' : '' %>>Completed</option>
+    </select>
+    <br>
+    <input type="submit" value="Update Task">
+  </form>
+</body>
+</html>

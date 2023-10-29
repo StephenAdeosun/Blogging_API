@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f5f5f5;
+        }
+
+        .login-container {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-top:40px;	
+            background-color: #fff;
+            width: 100%;
+            max-width: 600px; /* Set the maximum width here */
+        }
+    </style>
+</head>
+<body>
+    <!-- <header>
+        <%- include('./partials/header.ejs'); %>
+    </header> -->
+    <div class="body1">
+    <div class="container login-container">
+        <h2>Login</h2>
+        <form action="/views/login" method="post">
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="text" class="form-control" id="email" name="email" value="">
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" class="form-control" id="password" name="password" value="">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <div class="d-flex">
+        <p>Dont have an account?  </p> 
+        <a href="/views/signup">Sign up</a>
+        </div>
+    </div>
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
