@@ -62,65 +62,6 @@ const CreateBlog = async (req, res) => {
 };
 
 
-// const CreateBlog = async (req, res) => {
-//     try {
-//         const blogFromReq = req.body
-
-//         const existingBlog = await BlogModel.findOne({ title: blogFromReq.title })
-//         if (existingBlog) {
-//             return res.status(409).json({
-//                 success: false,
-//                 message: 'Blog with this title already exists',
-//             })
-//         }
-
-//         const blog = await BlogModel.create({
-//             title: blogFromReq.title,
-//             body: blogFromReq.body,
-//             description: blogFromReq.description,
-//             state: blogFromReq.state,
-//             author: { id: req.user._id, name: req.user.first_name},
-//             tags: blogFromReq.tags,
-//         })
-
-
-//         if (blog) {
-//             return res.status(201).json({
-//                 success: true,
-//                 message: 'Blog created successfully',
-//                 data: { blog }
-//             })
-//         }
-
-//     }
-//     catch (error) {
-//         res.status(500).json({
-//             success: false,
-//             message: error.message,
-//         })
-//     }
-// }
-
-// get published blogs only
-const GetBlogs = async (req, res) => {
-  try {
-    const blogs = await BlogModel.find({ state: 'published' })
-    if (blogs) {
-      logger.info(`Blogs fetched successfully`);
-      return res.status(200).json({
-        success: true,
-        message: 'Blogs fetched successfully',
-        data: { blogs }
-      })
-    }
-  } catch (error) {
-    logger.error('Error fetching blogs:', error);
-    res.status(500).json({
-      success: false,
-      message: error.message,
-    })
-  }
-}
 
 
 const UpdateBlogState = (async (req, res) => {
@@ -363,7 +304,7 @@ const GetSingleBlog = async (req, res) => {
 
 module.exports = {
   CreateBlog,
-  GetBlogs,
+  // GetBlogs,
   UpdateBlogState,
   UpdateBlog,
   DeleteBlog,

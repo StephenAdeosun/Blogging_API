@@ -55,7 +55,7 @@ describe('Blog Tests', () => {
         const response = await supertest(app)
         .post('/blog/create')
         .set('content-type', 'application/json')
-        .set("authorization", `Bearer ${user.generateToken()}`)
+        .set("authorization", ``)
         .send({
             title: "My First Blog",
             body: "This is my first blog",
