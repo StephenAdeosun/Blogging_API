@@ -1,7 +1,11 @@
 const joi = require('joi')
 const logger = require("../logger/logger.js")
+const cloudinary = require('../integrations/cloudinary.js')
+const fs = require('fs')
+const path = require('path')
 
 const ValidateBlogCreation = async (req, res, next) => {
+    console.log(req.body)
     try {
         const schema = joi.object({
             title: joi.string().required().min(3).messages({
@@ -33,8 +37,8 @@ const ValidateBlogCreation = async (req, res, next) => {
     } catch (error) {
         logger.error('Blog Creation Validation Failed', error)
         return res.status(422).json({
-            // message: error.message,
-            message: 'You are not authenticated!',
+            message: error.message,
+            // message: 'Blog Creation Validation Failed',
 
             success: false
         })
@@ -79,11 +83,27 @@ const ValidateBlogUpdate = async (req, res, next) => {
     }
 }
 
+const fileUpload = async (file) => {
 
+  await cloudinary.uploader.upload(file, (err, fileData) => {
+        if (err) {
+            logger.error(err)
+
+        }
+        fs.unlinkSync(file)
+
+        if (fileData) {
+            return fileData
+        }
+
+    })
+
+}
 
 
 module.exports = {
     ValidateBlogCreation,
-    ValidateBlogUpdate
-    
+    ValidateBlogUpdate,
+    fileUpload
+
 }

@@ -3,6 +3,9 @@ const jwt = require('jsonwebtoken')
 const UserModel = require('../model/UserModel')
 require('dotenv').config()
 const logger = require('../logger/logger')
+const cloudinary = require('../integrations/cloudinary.js')
+const fs = require('fs')
+const path = require('path')
 
 function calculateReadingTime(content) {
   // Define an average reading speed in words per minute (adjust as needed)
@@ -18,10 +21,27 @@ function calculateReadingTime(content) {
 
 }
 
+const fileUpload = async (file) => {
+
+  await cloudinary.uploader.upload(file, (err, fileData) => {
+        if (err) {
+            logger.error(err)
+            // throw new Error(err)
+        }
+        fs.unlinkSync(file)
+
+        if (fileData) {
+            return fileData
+        }
+
+    })
+
+}
+
 const CreateBlog = async (req, res) => {
   try {
     const blogFromReq = req.body;
-
+    const file = req.file
     const existingBlog = await BlogModel.findOne({ title: blogFromReq.title });
     if (existingBlog) {
       logger.error('Blog with this title already exists');
@@ -33,7 +53,7 @@ const CreateBlog = async (req, res) => {
 
     // Calculate the estimated reading time using the function
     const readingTime = calculateReadingTime(blogFromReq.body);
-
+    const imgUrl = await fileUpload(file)
     const blog = await BlogModel.create({
       title: blogFromReq.title,
       body: blogFromReq.body,
@@ -41,6 +61,7 @@ const CreateBlog = async (req, res) => {
       state: blogFromReq.state,
       author: { id: req.user._id, name: req.user.first_name },
       tags: blogFromReq.tags,
+      img_url: imgUrl.secure_url,
       reading_time: `${readingTime} mins`, // Set the estimated reading time
     });
 

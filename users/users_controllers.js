@@ -2,6 +2,7 @@ const UserSchema = require('../model/UserModel')
 const jwt = require('jsonwebtoken')
 require('dotenv').config()
 const logger = require('../logger/logger')
+const sendEmail = require('../utils/email')
 
 const CreateUser = async (req, res) => {
     try {
@@ -18,12 +19,10 @@ const CreateUser = async (req, res) => {
 
 
 
-        const user = await UserSchema.create({
-            first_name: userFromReq.first_name,
-            last_name: userFromReq.last_name,
-            email: userFromReq.email,
-            password: userFromReq.password,
-        })
+    
+        const user = await UserSchema.create(userFromReq)
+        const message = `Welcome ${user.first_name} ${user.last_name} to Blog App`
+        await sendEmail(message, user)
         logger.info('User created successfully')
         const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: '1hr' })
 
@@ -32,7 +31,7 @@ const CreateUser = async (req, res) => {
             return res.status(201).json({
                 success: true,
                 message: 'User created successfully',
-                data: { user, token }
+                // data: { user, token }
             })
         }
 
@@ -68,11 +67,11 @@ const LoginUser = async (req, res) => {
         })
     }
     logger.info('User logged in successfully')
-    const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: '1hr' })
+    const token = jwt.sign({ id: user._id, username: user.first_name, email: user.email }, process.env.JWT_SECRET, { expiresIn: '1hr' })
     return res.status(200).json({
         success: true,
         message: 'User logged in successfully',
-        data: { user, token }
+        data: {  token }
     })
 }
 catch (error) {

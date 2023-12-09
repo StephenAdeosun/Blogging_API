@@ -23,6 +23,7 @@ const BlogModel = new Schema({
   read_count: { type: Number, default: 0 },
   reading_time: { type: String, default: 0 },
   tags: [String],
+  img_url: { type: String },
   author_name: { type: String},
   body: { type: String, required: true },
   timestamp: { type: Date, default: Date.now },
