@@ -1,4 +1,4 @@
-const UserSchema = require('../model/UserModel')
+const UserModel = require('../model/UserModel')
 const jwt = require('jsonwebtoken')
 require('dotenv').config()
 const logger = require('../logger/logger')
@@ -9,7 +9,7 @@ const CreateUser = async (req, res) => {
     try {
         const userFromReq = req.body
 
-        const existingUser = await UserSchema.findOne({ email: userFromReq.email })
+        const existingUser = await UserModel.findOne({ email: userFromReq.email })
         if (existingUser) {
             logger.error('User already exists')
             return res.status(409).json({
@@ -19,7 +19,7 @@ const CreateUser = async (req, res) => {
         }
 
 
-        const user = await UserSchema.create(userFromReq)
+        const user = await UserModel.create(userFromReq)
         const message = `Welcome ${user.first_name} ${user.last_name} to Blog App`
         await sendEmail(message, user)
         logger.info('User created successfully')
@@ -52,7 +52,7 @@ const CreateUser = async (req, res) => {
 const LoginUser = async (req, res) => {
     try{
     const userFromReq = req.body
-    const user = await UserSchema.findOne({ email: userFromReq.email })
+    const user = await UserModel.findOne({ email: userFromReq.email })
     if (!user){
         logger.error('User not found')
         return res.status(404).json({
@@ -85,12 +85,49 @@ catch (error) {
 }
 }
 
+const LogoutUser = async (req, res) => {
+    try{
+    res.cookie('jwt', '', { maxAge: 1 })
+    logger.info('User logged out successfully')
+    return res.status(200).json({
+        success: true,
+        message: 'User logged out successfully',
+    })
+}
+catch (error) {
+    logger.error('User logout failed', error)
+    res.status(500).json({
+        success: false,
+        message: error.message,
+    })
+}
+}
 
+const DeleteUser = async (req, res) => {
+try{
+    user = req.user
+     
+    await UserModel.findByIdAndDelete(user._id)
+    logger.info('User deleted successfully')
+    return res.status(200).json({
+        success: true,
+        message: 'User deleted successfully',
+    })
 
+}catch (error) {
+    logger.error('User deletion failed', error)
+    res.status(500).json({
+        success: false,
+        message: error.message,
+    })
+}
+}	
 
 
 
 module.exports = {
     LoginUser,
-    CreateUser
+    CreateUser,
+    LogoutUser,
+    DeleteUser
 }

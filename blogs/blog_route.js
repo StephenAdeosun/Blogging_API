@@ -15,7 +15,7 @@ const router = express.Router();
 router.get('/',controller.GetAllBlogs);
 router.get('/:id',controller.GetBlogById);
 
-router.use(authMiddleware.EnsureLogin);
+router.use(authMiddleware.authenticateUser);
 router.get('/author', controller.GetBlogByAuthor);
 router.put('/:id/state', controller.UpdateBlogState);
 router.patch('/:id/edit',middleware.ValidateBlogUpdate, controller.UpdateBlog);
@@ -37,7 +37,7 @@ const upload = multer({
   limits: { fileSize: 1024 * 1024 * 5 }, // Limit file size to 5MB (adjust as needed)
 });
 
-router.post('/create-blog',authMiddleware.EnsureLogin, upload.single('blogImage'),controller.createBlog);
+router.post('/create-blog',authMiddleware.authenticateUser, upload.single('blogImage'),controller.createBlog);
 
 
 
