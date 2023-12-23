@@ -3,6 +3,7 @@ const jwt = require('jsonwebtoken')
 require('dotenv').config()
 const logger = require('../logger/logger')
 const sendEmail = require('../utils/email')
+const cookieParser = require('cookie-parser')
 
 const CreateUser = async (req, res) => {
     try {
@@ -44,6 +45,9 @@ const CreateUser = async (req, res) => {
     }
 }
 
+// store user to cookie
+
+
 
 const LoginUser = async (req, res) => {
     try{
@@ -66,10 +70,10 @@ const LoginUser = async (req, res) => {
     }
     logger.info('User logged in successfully')
     const token = jwt.sign({ id: user._id, username: user.first_name, email: user.email }, process.env.JWT_SECRET, { expiresIn: '1hr' })
+    res.cookie('jwt', token, { httpOnly: true, maxAge: 3600000 })
     return res.status(200).json({
         success: true,
         message: 'User logged in successfully',
-        data: {  token }
     })
 }
 catch (error) {
