@@ -13,13 +13,11 @@ const CreateUser = async (req, res) => {
             logger.error('User already exists')
             return res.status(409).json({
                 success: false,
-                message: 'User already exists',
+                message: 'User with this email already exists',
             })
         }
 
 
-
-    
         const user = await UserSchema.create(userFromReq)
         const message = `Welcome ${user.first_name} ${user.last_name} to Blog App`
         await sendEmail(message, user)

@@ -7,82 +7,52 @@ const cloudinary = require('../integrations/cloudinary.js')
 const fs = require('fs')
 const path = require('path')
 
-function calculateReadingTime(content) {
+function calculateReadingTime(data) {
   // Define an average reading speed in words per minute (adjust as needed)
   const wordsPerMinute = 200;
 
   // Count the number of words in the content
-  const wordCount = content.split(/\s+/).length;
+  const wordCount = data.split(/\s+/).length;
 
   // Calculate the estimated reading time in minutes
   const readingTimeMinutes = wordCount / wordsPerMinute;
-  logger.info(`Estimated reading time: ${readingTimeMinutes} minutes`);
   return readingTimeMinutes;
 
 }
 
-const fileUpload = async (file) => {
 
-  await cloudinary.uploader.upload(file, (err, fileData) => {
-        if (err) {
-            logger.error(err)
-            // throw new Error(err)
-        }
-        fs.unlinkSync(file)
-
-        if (fileData) {
-            return fileData
-        }
-
-    })
-
-}
-
-const CreateBlog = async (req, res) => {
+const createBlog = async (req, res) => {
   try {
-    const blogFromReq = req.body;
-    const file = req.file
-    const existingBlog = await BlogModel.findOne({ title: blogFromReq.title });
-    if (existingBlog) {
-      logger.error('Blog with this title already exists');
-      return res.status(409).json({
-        success: false,
-        message: 'Blog with this title already exists',
-      });
-    }
-
-    // Calculate the estimated reading time using the function
-    const readingTime = calculateReadingTime(blogFromReq.body);
-    const imgUrl = await fileUpload(file)
-    const blog = await BlogModel.create({
-      title: blogFromReq.title,
-      body: blogFromReq.body,
-      description: blogFromReq.description,
-      state: blogFromReq.state,
-      author: { id: req.user._id, name: req.user.first_name },
-      tags: blogFromReq.tags,
-      img_url: imgUrl.secure_url,
-      reading_time: `${readingTime} mins`, // Set the estimated reading time
+    const { title, body, description, state, tags, } = req.body;
+    const { file } = req;
+    const filePath = file.path;
+    const { secure_url } = await cloudinary.uploader.upload(filePath);
+    fs.unlinkSync(filePath)
+    const readingTime = calculateReadingTime(body);
+    const blog = new BlogModel({
+      title,
+      body,
+      description,
+      state,
+      tags,
+      reading_time: `${readingTime} mins`,
+      // author: { id: req.user._id, name: req.user.first_name },
+      img_url: secure_url,
     });
-
-    if (blog) {
-      logger.info(`Blog created successfully: ${blog.title}`);
-      return res.status(201).json({
-        success: true,
-        message: 'Blog created successfully',
-        data: { blog },
-      });
-    }
+    await blog.save();
+    res.status(201).json({
+      success: true,
+      message: 'Blog created successfully',
+      data: { blog },
+    });
   } catch (error) {
-    logger.error('Error creating blog:', error);
+    logger.error('Something went wrong', error);
     res.status(500).json({
       success: false,
       message: error.message,
     });
   }
-};
-
-
+}
 
 
 const UpdateBlogState = (async (req, res) => {
@@ -185,9 +155,6 @@ const DeleteBlog = (async (req, res) => {
 })
 
 
-// The owner of the blog should be able to get a list of their blogs. 
-// The endpoint should be paginated
-// It should be filterable by state
 
 const GetBlogByAuthor = async (req, res) => {
   try {
@@ -233,6 +200,7 @@ const GetBlogByAuthor = async (req, res) => {
 
 }
 
+
 const GetAllBlogs = (async (req, res) => {
   try {
     // Pagination parameters (page and limit)
@@ -258,7 +226,7 @@ const GetAllBlogs = (async (req, res) => {
 
     if (author) {
       logger.info(`Retrieving blogs by ${author}`);
-      query['author.name'] = author; 
+      query['author.name'] = author;
     }
 
     if (title) {
@@ -306,7 +274,7 @@ const GetSingleBlog = async (req, res) => {
     await blog.save();
 
     // Retrieve the user information (author) for the blog
-    const author = await UserModel.findById(blog.author.id); 
+    const author = await UserModel.findById(blog.author.id);
 
     if (!author) {
       logger.error('Author not found');
@@ -324,13 +292,13 @@ const GetSingleBlog = async (req, res) => {
 
 
 module.exports = {
-  CreateBlog,
-  // GetBlogs,
+  createBlog,
   UpdateBlogState,
   UpdateBlog,
   DeleteBlog,
   GetBlogByAuthor,
   GetAllBlogs,
   GetBlogById: GetSingleBlog
+
 
 }

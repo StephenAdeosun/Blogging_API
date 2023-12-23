@@ -10,10 +10,9 @@ const BlogModel = new Schema({
   },
   title: {
     type: String,
-    required: true,
-    unique: true,
+    // unique: true,
   },
-  description: { type: String, required: true },
+  description: { type: String,  },
   author: { id: String, name: String  },
   state: {
     type: String,
@@ -25,7 +24,7 @@ const BlogModel = new Schema({
   tags: [String],
   img_url: { type: String },
   author_name: { type: String},
-  body: { type: String, required: true },
+  body: { type: String },
   timestamp: { type: Date, default: Date.now },
   updated_at: { type: Date, default: Date.now },
 });
