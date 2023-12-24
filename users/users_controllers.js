@@ -3,7 +3,7 @@ const jwt = require('jsonwebtoken')
 require('dotenv').config()
 const logger = require('../logger/logger')
 const sendEmail = require('../utils/email')
-const cookieParser = require('cookie-parser')
+const crypto = require('crypto')
 
 const CreateUser = async (req, res) => {
     try {
@@ -123,11 +123,52 @@ try{
 }
 }	
 
+const ResetPasswordRequest = async (req, res) => {
+    try{
+        const { email } = req.body;
+        const user = await UserModel.findOne({ email });
+        if (!user) {
+            logger.error('User not found')
+            return res.status(404).json({
+                success: false,
+                message: 'User not found'
+            })
+        }
+        const resetToken = crypto.randomBytes(32).toString('hex');
+        const resetTokenExpiry = Date.now() + 3600000; // Token valid for 1 hour
+
+        user.resetPasswordToken = resetToken;
+        user.resetPasswordExpires = resetTokenExpiry;
+        await user.save();
+
+        // Send a password reset email to the user
+        const resetURL = `http://localhost:7000/reset-password/${resetToken}`;
+        const message = `You are receiving this email because you (or someone else) has requested for a password reset. Please make a PUT request to: \n\n ${resetURL}`;
+        const subject = 'Password Reset Request';
+        await sendEmail(message, user, subject);
+
+        logger.info('Password reset email sent successfully')
+        return res.status(200).json({
+            success: true,
+            message: 'Password reset email sent successfully',
+        });
+    }catch (error) {
+        logger.error('User reset password failed', error)
+        res.status(500).json({
+            success: false,
+            message: error.message,
+        })
+    }
+}
+
+
+
 
 
 module.exports = {
     LoginUser,
     CreateUser,
     LogoutUser,
-    DeleteUser
+    DeleteUser,
+    ResetPasswordRequest
 }

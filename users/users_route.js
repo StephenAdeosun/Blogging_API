@@ -17,9 +17,14 @@ router.post('/login', middleware.ValidateUserLogin, controller.LoginUser);
 // logout
 router.post('/logout', controller.LogoutUser);
 
+//reset password request
+router.post('/reset-password-request', controller.ResetPasswordRequest);
+
 router.use(authMiddleware.authenticateUser);
 //delete user
 router.delete('/delete', controller.DeleteUser);
+
+
 module.exports = router;
 
 

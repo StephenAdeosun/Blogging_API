@@ -20,31 +20,6 @@ app.use('/', usersRouter);
 app.use('/blog/', blogRouter);
 
 
-app.post('/file/upload', upload.single('file'), async (req, res, next) => {
-// BlogModel.profileImage = req.file.path
-// BlogModel.save()
-  await cloudinary.uploader.upload(req.file.path, (err, result) => {
-    if (err) {
-      logger.error(err)
-      return res.status(500).json({
-        data: null,
-        error: 'Something went wrong'
-      })
-    }
-    fs.unlinkSync(req.file.path)
-    req.file = result
-
-    if (result) {console.log(result.secure_url)
-      return res.status(200).json({
-        data: result.secure_url,
-        error: null
-      })
-      
-    }
-
-  })
-})
-
 const file = path.join(__dirname, 'public', 'index.html')
 app.get('/file/form', (req, res) => {
   res.sendFile(file)
