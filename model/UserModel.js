@@ -12,8 +12,11 @@ const UserModel = new Schema({
     last_name: { type: String, required: true },
     email: { type: String, unique: true, required: true },
     password: { type: String, required: true },
+    resetPasswordToken: { type: String },
+    resetPasswordExpires: { type: Date },
 
 });
+
 
 UserModel.pre('save', async function(next) {
   user = this;

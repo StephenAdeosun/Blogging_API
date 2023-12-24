@@ -20,6 +20,9 @@ router.post('/logout', controller.LogoutUser);
 //reset password request
 router.post('/reset-password-request', controller.ResetPasswordRequest);
 
+//reset password
+router.post('/reset-password', controller.ResetPassword);
+
 router.use(authMiddleware.authenticateUser);
 //delete user
 router.delete('/delete', controller.DeleteUser);
