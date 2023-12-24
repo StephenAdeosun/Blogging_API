@@ -43,10 +43,10 @@ const ValidateUserLogin = async (req, res, next) => {
         })
 
         await schema.validateAsync(req.body, { abortEarly: true })
-        logger.info('User Login Validation Successful')
+        // logger.info('User Login Validation Successful')
         next()
     } catch (error) {
-        logger.error('User Login Validation Failed', error)
+        // logger.error('User Login Validation Failed', error)
         return res.status(422).json({
             message: error.message,
             success: false

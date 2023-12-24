@@ -70,6 +70,7 @@ const LoginUser = async (req, res) => {
         }
         logger.info('User logged in successfully')
         const token = jwt.sign({ id: user._id, username: user.first_name, email: user.email }, process.env.JWT_SECRET, { expiresIn: '1hr' })
+        console.log(token)
         res.cookie('jwt', token, { httpOnly: true, maxAge: 3600000 })
         return res.status(200).json({
             success: true,
@@ -164,40 +165,49 @@ const ResetPasswordRequest = async (req, res) => {
     }
 }
 
+
+
 const ResetPassword = async (req, res) => {
     try {
-
         const { token, password } = req.body;
+
+        // Find the user by the reset token and ensure it's not expired
         const user = await UserModel.findOne({
             resetPasswordToken: token,
             resetPasswordExpires: { $gt: Date.now() }
-        },
-        { new: true },
-        {password: password, resetPasswordToken: undefined, resetPasswordExpires: undefined}
-        );
+        });
+
+        // If user not found or token is expired, return an error
         if (!user) {
-            logger.error('User not found')
+            logger.error('User not found or invalid/expired token');
             return res.status(404).json({
                 success: false,
                 message: 'Invalid or expired token'
-            })
+            });
         }
-        res.status(200).json({
+
+        // Update the user's password and clear reset token fields
+        user.password = password;
+        user.resetPasswordToken = undefined;
+        user.resetPasswordExpires = undefined;
+
+        // Save the updated user to the database
+        await user.save();
+
+        // Return a success response
+        return res.status(200).json({
             success: true,
             message: 'Password reset successful',
         });
 
-    }catch (error) {
-        logger.error('User reset password failed', error)
+    } catch (error) {
+        logger.error('User reset password failed', error);
         res.status(500).json({
             success: false,
             message: error.message,
-        })
-}
-}
-
-
-
+        });
+    }
+};
 
 
 module.exports = {
