@@ -146,7 +146,7 @@ const ResetPasswordRequest = async (req, res) => {
         console.log(user.resetPasswordExpires);
 
         // Send a password reset email to the user
-        const resetURL = `http://localhost:7000/reset-password?token=${resetToken}`;
+        const resetURL = `https://curtisdev.netlify.app?token=${resetToken}`;
         const message = `You are receiving this email because you (or someone else) has requested for a password reset. Please make a PUT request to: \n\n ${resetURL}`;
         const subject = 'Password Reset Request';
         await sendEmail(message, user, subject);
