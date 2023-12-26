@@ -14,8 +14,8 @@ router.post('/signup', middleware.ValidateUserCreation, controller.CreateUser);
 // login
 router.post('/login', middleware.ValidateUserLogin, controller.LoginUser);
 
-// logout
-router.post('/logout', controller.LogoutUser);
+//activate user
+router.post('/activate', controller.ActivateUser);
 
 //reset password request
 router.post('/reset-password-request', controller.ResetPasswordRequest);
@@ -24,6 +24,8 @@ router.post('/reset-password-request', controller.ResetPasswordRequest);
 router.post('/reset-password', controller.ResetPassword);
 
 router.use(authMiddleware.authenticateUser);
+// logout
+router.post('/logout', controller.LogoutUser);
 //delete user
 router.delete('/delete', controller.DeleteUser);
 

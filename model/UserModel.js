@@ -14,6 +14,9 @@ const UserModel = new Schema({
     password: { type: String, required: true },
     resetPasswordToken: { type: String },
     resetPasswordExpires: { type: Date },
+    isActive: { type: Boolean, default: false },
+    activationCode: { type: String },
+    activationCodeExpires: { type: Date },
 
 });
 

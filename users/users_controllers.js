@@ -4,6 +4,14 @@ require('dotenv').config()
 const logger = require('../logger/logger')
 const sendEmail = require('../utils/email')
 const crypto = require('crypto')
+const randToken = require('rand-token')
+const { addMinutes, isAfter } = require('date-fns')
+
+function generateToken() {
+    const sixDigitToken = randToken.generate(6, '1234567890');
+    return sixDigitToken;
+
+}
 
 const CreateUser = async (req, res) => {
     try {
@@ -18,19 +26,27 @@ const CreateUser = async (req, res) => {
             })
         }
 
+        const activationCode = generateToken()
+        const activationCodeExpires = addMinutes(new Date(), 5)
 
-        const user = await UserModel.create(userFromReq)
-        const message = `Welcome ${user.first_name} ${user.last_name} to Blog App`
-        await sendEmail(message, user)
-        logger.info('User created successfully')
-        const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: '1hr' })
-
+        const user = await UserModel.create({
+            ...userFromReq,
+            activationCode: activationCode,
+            activationCodeExpires: activationCodeExpires,
+            isActive: false
+        })
+        
+        const message = `Welcome ${user.first_name} ${user.last_name} to my Blog App. Your activation code is ${activationCode}`
+        const subject = `Welcome to Stephen's blog app`
+        await sendEmail(message, user, subject)
+       
+        // const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: '1hr' })
+        // res.cookie('jwt', token, { httpOnly: true, maxAge: 3600000 })
         if (user) {
             logger.info('User created successfully')
             return res.status(201).json({
                 success: true,
                 message: 'User created successfully',
-                // data: { user, token }
             })
         }
 
@@ -45,7 +61,48 @@ const CreateUser = async (req, res) => {
     }
 }
 
-// store user to cookie
+const ActivateUser = async (req, res) => {
+  try {
+    const {activationCode} = req.body
+    const user = await UserModel.findOne({activationCode})
+    if(!user){
+        logger.error('User not found')
+        return res.status(404).json({
+            success: false,
+            message: 'User not found'
+        })
+    }
+     if (user.isActive){
+        logger.error('User already activated')
+        return res.status(409).json({
+            success: false,
+            message: 'User already activated'
+        })
+  }
+  const codeExpires = isAfter(new Date(), user.activationCodeExpires)
+    if (codeExpires){
+        logger.error('Activation code expired')
+        return res.status(400).json({
+            success: false,
+            message: 'Activation code expired'
+        })
+    }
+    user.isActive = true
+    await user.save()
+    logger.info('User activated successfully')
+    return res.status(200).json({
+        success: true,
+        message: 'User activated successfully',
+    })
+  } catch(error){
+    logger.error('User activation failed', error)
+    res.status(500).json({
+        success: false,
+        message: error.message,
+    })
+
+}
+}
 
 
 
@@ -68,10 +125,18 @@ const LoginUser = async (req, res) => {
                 message: 'Invalid password'
             })
         }
-        logger.info('User logged in successfully')
+        // if (!user.isActive) {
+        //     logger.error('User not activated')
+        //     return res.status(400).json({
+        //         success: false,
+        //         message: 'User not activated'
+        //     })
+        // }
+        
         const token = jwt.sign({ id: user._id, username: user.first_name, email: user.email }, process.env.JWT_SECRET, { expiresIn: '1hr' })
         console.log(token)
         res.cookie('jwt', token, { httpOnly: true, maxAge: 3600000 })
+        logger.info('User logged in successfully')
         return res.status(200).json({
             success: true,
             message: 'User logged in successfully',
@@ -216,5 +281,6 @@ module.exports = {
     LogoutUser,
     DeleteUser,
     ResetPasswordRequest,
-    ResetPassword
+    ResetPassword,
+    ActivateUser
 }
