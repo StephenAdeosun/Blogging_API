@@ -116,7 +116,15 @@ const LoginUser = async (req, res) => {
                 success: false,
                 message: 'User not found'
             })
-        }
+        }  
+        console.log(user)
+        //       if (!user.isActive) {
+        //     logger.error('User not activated')
+        //     return res.status(400).json({
+        //         success: false,
+        //         message: 'User not activated'
+        //     })
+        // }
         const validPassword = await user.validatePassword(userFromReq.password)
         if (!validPassword) {
             logger.error('Invalid password')
@@ -125,13 +133,9 @@ const LoginUser = async (req, res) => {
                 message: 'Invalid password'
             })
         }
-        // if (!user.isActive) {
-        //     logger.error('User not activated')
-        //     return res.status(400).json({
-        //         success: false,
-        //         message: 'User not activated'
-        //     })
-        // }
+        console.log(validPassword)
+
+        
         
         const token = jwt.sign({ id: user._id, username: user.first_name, email: user.email }, process.env.JWT_SECRET, { expiresIn: '1hr' })
         console.log(token)
