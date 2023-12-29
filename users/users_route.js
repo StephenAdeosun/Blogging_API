@@ -23,6 +23,7 @@ router.post('/activate', controller.ActivateUser);
 router.post('/reset-password-request', controller.ResetPasswordRequest);
 
 
+
 //reset password
 router.post('/reset-password', controller.ResetPassword);
 
