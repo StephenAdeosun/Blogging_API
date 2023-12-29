@@ -11,8 +11,6 @@ router.use(cookieParser());
 // signup
 router.post('/signup', middleware.ValidateUserCreation, controller.CreateUser);
 
-
-
 // login
 router.post('/login', middleware.ValidateUserLogin, controller.LoginUser);
 
@@ -21,11 +19,6 @@ router.post('/activate', controller.ActivateUser);
 
 //reset password request
 router.post('/reset-password-request', controller.ResetPasswordRequest);
-
-
-
-
-
 
 //reset password
 router.post('/reset-password', controller.ResetPassword);
