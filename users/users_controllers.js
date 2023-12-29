@@ -27,7 +27,7 @@ const CreateUser = async (req, res) => {
         }
 
         const activationCode = generateToken()
-        const activationCodeExpires = addMinutes(new Date(), 5)
+        const activationCodeExpires = addMinutes(new Date(), 60)
 
         const user = await UserModel.create({
             ...userFromReq,

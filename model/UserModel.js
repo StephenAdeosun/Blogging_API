@@ -22,7 +22,7 @@ const UserModel = new Schema({
 
 
 
-
+4
 UserModel.pre('save', async function(next) {
   user = this;
   const hash = await bcrypt.hash(this.password, 10);
