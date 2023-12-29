@@ -17,6 +17,7 @@ router.post('/signup', middleware.ValidateUserCreation, controller.CreateUser);
 
 
 
+
 // login
 router.post('/login', middleware.ValidateUserLogin, controller.LoginUser);
 
