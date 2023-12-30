@@ -44,18 +44,3 @@ router.post('/create-blog',authMiddleware.authenticateUser, upload.single('blogI
 module.exports = router;
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
