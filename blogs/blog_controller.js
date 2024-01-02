@@ -81,7 +81,10 @@ const UpdateBlogState = (async (req, res) => {
   // Save the updated blog
   await blog.save();
 
-  return res.status(200).json({ message: 'Blog state updated successfully' });
+  return res.status(200).json({ 
+    message: 'Blog state updated successfully',
+    data: blog
+});
 
 })
 
@@ -122,7 +125,7 @@ const UpdateBlog = (async (req, res) => {
     blog.state = req.body.state;
   }
 
-  
+
   // Save the updated blog
   await blog.save();
 
