@@ -16,7 +16,13 @@ router.get('/',controller.GetAllBlogs);
 router.get('/:id',controller.GetBlogById);
 
 router.use(authMiddleware.authenticateUser);
-router.get('/author', controller.GetBlogByAuthor);
+router.get('/By/Title', (req, res) => {
+  res.status(200).json({
+    message: 'Blog title updated successfully',
+    // data: req.body.title,
+  });
+});
+router.get('/By/Author', controller.GetBlogByAuthor);
 router.put('/:id/state', controller.UpdateBlogState);
 router.patch('/:id/edit',middleware.ValidateBlogUpdate, controller.UpdateBlog);
 router.delete('/:id/delete', controller.DeleteBlog);
@@ -37,8 +43,9 @@ const upload = multer({
   limits: { fileSize: 1024 * 1024 * 5 }, // Limit file size to 5MB (adjust as needed)
 });
 
-router.post('/create-blog',authMiddleware.authenticateUser, upload.single('blogImage'),controller.createBlog);
+router.post('/create-blog',authMiddleware.authenticateUser, upload.single('blogImage'), controller.createBlog);
 
 
 
 module.exports = router;
+

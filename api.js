@@ -9,15 +9,16 @@ const upload = multer({ dest: 'uploads/' })
 const fs = require('fs')
 const path = require('path')
 const cloudinary = require('./integrations/cloudinary.js')
+const cookieParser = require('cookie-parser');
 
 app.use(express.json())
 
-
-// user routes
-app.use('/', usersRouter);
-
+app.use(cookieParser());
 // blog routes
 app.use('/blog/', blogRouter);
+
+// user routes
+ app.use('/', usersRouter);
 
 
 const file = path.join(__dirname, 'public', 'index.html')
@@ -27,7 +28,7 @@ app.get('/file/form', (req, res) => {
 
 const limiter = rateLimit({
   windowMs: 0.5 * 60 * 1000, // 30seconds
-  limit: 5, // Limit each IP to 100 requests per `window` (here, per 1 minutes).
+  limit: 5, // Limit each IP to 5 requests per `window` (here, per 1 minutes).
   standardHeaders: 'draft-7', // draft-6: `RateLimit-*` headers; draft-7: combined `RateLimit` header.
 });
 

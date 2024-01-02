@@ -16,7 +16,7 @@ const ValidateBlogCreation = async (req, res, next) => {
                 'string.min': 'Body must be at least 3 characters long',
                 'any.required': 'Body is required',
             }),
-            description: joi.string().required().min(3).messages({
+            description: joi.string().min(3).messages({
                 'string.min': 'Description must be at least 3 characters long',
                 'any.required': 'Description is required',
             }),

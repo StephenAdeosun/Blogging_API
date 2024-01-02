@@ -36,7 +36,7 @@ const createBlog = async (req, res) => {
       state,
       tags,
       reading_time: `${readingTime} mins`,
-      // author: { id: req.user._id, name: req.user.first_name },
+      author: { id: req.user._id, name: req.user.first_name },
       img_url: secure_url,
     });
     await blog.save();
@@ -122,6 +122,7 @@ const UpdateBlog = (async (req, res) => {
     blog.state = req.body.state;
   }
 
+  
   // Save the updated blog
   await blog.save();
 
@@ -226,7 +227,7 @@ const GetAllBlogs = (async (req, res) => {
 
     if (author) {
       logger.info(`Retrieving blogs by ${author}`);
-      query['author.name'] = author;
+      query['author.name'] = new RegExp(author, 'i');
     }
 
     if (title) {
@@ -234,7 +235,8 @@ const GetAllBlogs = (async (req, res) => {
     }
 
     if (tags) {
-      query.tags = { $in: tags.split(',') };
+      query.tags = new RegExp(tags, 'i'); // Case-insensitive search
+      // query.tags = { $in: tags.split(',') };
     }
 
     // Retrieve blogs with pagination, search, and ordering
